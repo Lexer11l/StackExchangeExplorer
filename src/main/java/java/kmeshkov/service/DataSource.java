@@ -1,6 +1,6 @@
-package kmeshkov.service;
+package java.kmeshkov.service;
 
-import kmeshkov.model.Query;
+import java.kmeshkov.model.Query;
 
 import java.io.IOException;
 

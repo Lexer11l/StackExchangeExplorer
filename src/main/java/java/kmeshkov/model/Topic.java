@@ -1,4 +1,4 @@
-package kmeshkov.model;
+package java.kmeshkov.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
