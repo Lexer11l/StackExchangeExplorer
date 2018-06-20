@@ -1,9 +1,8 @@
-package java.kmeshkov.service.impl;
+package kmeshkov.service.impl;
 
-import java.kmeshkov.controller.QueryController;
-import java.kmeshkov.model.Query;
-import java.kmeshkov.service.DataSource;
-import java.kmeshkov.utils.RequestBuilder;
+import kmeshkov.model.Query;
+import kmeshkov.service.DataSource;
+import kmeshkov.utils.RequestBuilder;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;

@@ -1,9 +1,9 @@
-package java.kmeshkov.utils;
+package kmeshkov.utils;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonDeserializer;
-import java.kmeshkov.model.Topic;
+import kmeshkov.model.Topic;
 import org.json.JSONArray;
 import org.json.JSONObject;
 

@@ -10,7 +10,7 @@
     <table>
         <TR>
             <TD>Text for search</TD>
-            <TD><input name="intitle"/> </TD>
+            <TD><input name="intitle"> </TD>
         </TR>
         <TR>
             <TD>Page number</TD>
@@ -18,7 +18,7 @@
         </TR>
         <TR>
             <TD>Page size (max 100)</TD>
-            <TD><input name="pageSize"/> </TD>
+            <TD><input name="pageSize" /> </TD>
         </TR>
         <TR>
             <TD>Sorting by</TD>

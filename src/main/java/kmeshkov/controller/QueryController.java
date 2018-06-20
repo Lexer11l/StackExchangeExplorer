@@ -1,7 +1,7 @@
-package java.kmeshkov.controller;
+package kmeshkov.controller;
 
-import java.kmeshkov.model.Query;
-import java.kmeshkov.utils.HtmlUtils;
+import kmeshkov.model.Query;
+import kmeshkov.utils.HtmlUtils;
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
-import java.kmeshkov.service.DataSource;
+import kmeshkov.service.DataSource;
 
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -33,11 +33,11 @@ public class QueryController {
         binder.registerCustomEditor(Date.class, editor);
     }
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @RequestMapping(value = {"/", "searchPage"})
     public ModelAndView index() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("query", new Query());
-        modelAndView.setViewName("index");
+        modelAndView.setViewName("searchPage");
         return modelAndView;
     }
 

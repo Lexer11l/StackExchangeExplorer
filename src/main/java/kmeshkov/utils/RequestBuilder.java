@@ -1,6 +1,6 @@
-package java.kmeshkov.utils;
+package kmeshkov.utils;
 
-import java.kmeshkov.model.Query;
+import kmeshkov.model.Query;
 import org.apache.log4j.Logger;
 
 

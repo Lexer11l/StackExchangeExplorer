@@ -1,4 +1,4 @@
-package java.kmeshkov.model;
+package kmeshkov.model;
 
 import java.util.Date;
 
