@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>java.kmeshkov</groupId>
-    <artifactId>StackExchangeQueryService</artifactId>
+    <artifactId>StackExchangeExplorer</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
