@@ -1,5 +1,8 @@
 # StackExchangeExplorer
 
+Link to deployed service: 
+https://stack-exchange-explorer.herokuapp.com/
+
 <b>Description</b> <br>
 Java web application with a form that allows a user to enter a search string, queries Stack Exchange to find questions with titles containing that string, and display the results.
 
