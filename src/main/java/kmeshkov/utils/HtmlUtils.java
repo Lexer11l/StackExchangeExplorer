@@ -36,6 +36,7 @@ public class HtmlUtils {
                 new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(topic.getCreationDate()),
                 topic.getTags());
     }
+
     private static Gson createAndConfigGson() {
         GsonBuilder builder = new GsonBuilder();
         builder.registerTypeAdapter(Date.class, (JsonDeserializer<Date>)

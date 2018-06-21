@@ -38,7 +38,7 @@ public class QueryControllerTest {
 
 
     @Before
-    public void setUp() throws Exception {
+    public void setUp() {
         mockStatic(Logger.class);
         mockLog = mock(Logger.class);
         when(Logger.getLogger(any(Class.class))).thenReturn(mockLog);
@@ -64,9 +64,7 @@ public class QueryControllerTest {
     @Test
     public void sendFullQueryTest() throws IOException {
         when(dataSource.getTopics(any(Query.class))).thenReturn(RESPONSE);
-
         ModelAndView actual = queryController.sendQuery(new Query());
-
         ModelAndView expected = new ModelAndView("queryResults", "queryResult",
                 MESSAGE_HEADER + COMPLETE_TABLE_ROW_FROM_RESPONSE);
         Assert.assertEquals(expected.getViewName(), actual.getViewName());
@@ -76,9 +74,7 @@ public class QueryControllerTest {
     @Test
     public void sendErrorResponseQueryTest() throws IOException {
         when(dataSource.getTopics(any(Query.class))).thenThrow(IOException.class);
-
         ModelAndView actual = queryController.sendQuery(new Query());
-
         ModelAndView expected = new ModelAndView("queryResults", "queryResult", ERROR_RESPONSE);
         Assert.assertEquals(expected.getViewName(), actual.getViewName());
         Assert.assertEquals(expected.getModelMap().toString(), actual.getModelMap().toString());
