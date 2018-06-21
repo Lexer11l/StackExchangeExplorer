@@ -32,7 +32,7 @@ public class QueryController {
         binder.registerCustomEditor(Date.class, editor);
     }
 
-    @RequestMapping(value = {"/", "searchPage"})
+    @RequestMapping(value = {"/", "searchPage", "/searchPage"})
     public ModelAndView index() {
         ModelAndView modelAndView = new ModelAndView();
         modelAndView.addObject("query", new Query());
