@@ -1,6 +1,6 @@
 # StackExchangeExplorer
 
-<b>Desription</b> <br>
+<b>Description</b> <br>
 Java web application with a form that allows a user to enter a search string, queries Stack Exchange to find questions with titles containing that string, and display the results.
 
 <b>Requirements</b> <br>
@@ -42,7 +42,7 @@ In addition there were added logging in file and console and implemented unit te
 
 <b>Potential improvements</b><br>
 Due to lack of time some features were not implemented or were implemented not in perfect way. For example:
-* First of all, forms have very simple design. We can make it more beatuiful, colorful using CSS and more interactive using JavaScript.
+* First of all, forms have very simple design. We can make it more beautiful, colorful using CSS and more interactive using JavaScript.
 * Coverage of unit test is still small. We can improve it with writing additional tests.
 * We can separate service that interacts with StackExcange via API into microservice that uses SOAP. Thus we'll be able to change code there independently and get access there from different services event from smartphone apps.
 * Now we have restriction with 100 topic max per request. But if user wants we can implement getting more topics per one user query by making several request to remote API.
