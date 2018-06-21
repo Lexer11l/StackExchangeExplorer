@@ -1,5 +1,7 @@
 package kmeshkov.utils;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import kmeshkov.model.Query;
 import org.apache.log4j.Logger;
 
