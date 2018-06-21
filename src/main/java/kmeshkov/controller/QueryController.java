@@ -50,7 +50,7 @@ public class QueryController {
         } catch (IOException e) {
             LOGGER.warn("Got exception from remote service: {}", e);
             pageContent = "Did not received response from service.<br>" +
-                    "There was some problems with query <br>" +
+                    "There were some problems with query <br>" +
                     "Response have status:" + e.getMessage();
         }
         return new ModelAndView("queryResults", "queryResult", pageContent);

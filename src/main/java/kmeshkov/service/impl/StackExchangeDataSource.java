@@ -32,9 +32,16 @@ public class StackExchangeDataSource implements DataSource {
         int statusCode = response.getStatusLine().getStatusCode();
         LOGGER.info("Got response from remote service. Status code is " + statusCode);
         if (statusCode < 200 || statusCode > 226){
-            StringBuilder message = new StringBuilder("Status code: " + response.getStatusLine().getStatusCode() + ". " + response.getStatusLine().getReasonPhrase());
-            if (statusCode == 400);
-                message.append("<br>").append(new BasicResponseHandler().handleResponse(response));
+            StringBuilder message = new StringBuilder("Status code: ")
+                    .append(response.getStatusLine().getStatusCode()).append(". ")
+                    .append(response.getStatusLine().getReasonPhrase()).append("<br>");
+            if (statusCode == 400) {
+                String errorMessage = new BasicResponseHandler().handleEntity(response.getEntity());
+                LOGGER.warn("Bad request: " + errorMessage);
+                message.append("<br>")
+                        .append(errorMessage)
+                        .append("<br>");
+            }
             throw new IOException(message.toString());
         }
         return new BasicResponseHandler().handleResponse(response);
