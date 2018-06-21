@@ -1,5 +1,7 @@
 package kmeshkov.utils;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import kmeshkov.model.Query;
 import org.apache.log4j.Logger;
 
@@ -46,7 +48,8 @@ public class RequestBuilder {
     }
 
     private void addIntitleParameter() {
-        request.append("&intitle=").append(query.getIntitle());
+        String value = query.getIntitle().trim();
+        if (isValidString(value)) request.append("&intitle=").append(value);
     }
 
     private void addSortParameter() {
@@ -58,11 +61,11 @@ public class RequestBuilder {
     }
 
     private void addPageParameter() {
-        request.append("&pagesize=").append(query.getPageSize());
+        request.append("&page=").append(query.getPage().trim());
     }
 
     private void addPageSizeParameter() {
-        request.append("&pagesize=").append(query.getPageSize());
+        request.append("&pagesize=").append(query.getPageSize().trim());
     }
 
     private void addToDateParameter() {
@@ -71,6 +74,12 @@ public class RequestBuilder {
 
     private void addFromDateParameter() {
         request.append("&fromdate=").append(query.getFromDate().getTime() / 1000);
+    }
+    
+    private static boolean isValidString(String string){
+        Pattern p = Pattern.compile("^[A-Za-z0-9]+$");
+        Matcher m = p.matcher(string);
+        return m.matches();
     }
 
 }
