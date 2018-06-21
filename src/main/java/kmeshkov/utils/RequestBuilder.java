@@ -49,7 +49,7 @@ public class RequestBuilder {
 
     private void addIntitleParameter() {
         String value = query.getIntitle().trim();
-        request.append("&intitle=").append(isValidString(value)?value:" ");
+        if (isValidString(value)) request.append("&intitle=").append(value);
     }
 
     private void addSortParameter() {
