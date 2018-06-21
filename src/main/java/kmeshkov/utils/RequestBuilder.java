@@ -59,7 +59,7 @@ public class RequestBuilder {
     }
 
     private void addPageParameter() {
-        request.append("&page=").append(query.getPage().trim(););
+        request.append("&page=").append(query.getPage().trim());
     }
 
     private void addPageSizeParameter() {
