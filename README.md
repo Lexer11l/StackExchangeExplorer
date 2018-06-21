@@ -50,6 +50,7 @@ Due to lack of time some features were not implemented or were implemented not i
 * We can separate service that interacts with StackExcange via API into microservice that uses SOAP. Thus we'll be able to change code there independently and get access there from different services event from smartphone apps.
 * Now we have restriction with 100 topic max per request. But if user wants we can implement getting more topics per one user query by making several request to remote API.
 * Also we can add pagination to improve navigation experience at query results page.
+* More intelligent user input error handling with detailed error description
 
 <b>How to install</b>
 * Clone code from git
