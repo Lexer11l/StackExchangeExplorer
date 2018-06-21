@@ -50,5 +50,5 @@ Due to lack of time some features were not implemented or were implemented not i
 
 <b>How to install</b>
 * Clone code from git
-* Build using Maven: mvn clean package
+* Build using Maven: <i>mvn clean package</i>
 * Deploy on preferable Application Server
