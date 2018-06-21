@@ -9,7 +9,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 import kmeshkov.service.DataSource;
 
@@ -24,7 +23,7 @@ public class QueryController {
     private final static Logger LOGGER = Logger.getLogger(QueryController.class);
 
     @Autowired
-    DataSource dataSource;
+    private DataSource dataSource;
 
     @InitBinder
     private void dateBinder(WebDataBinder binder) {

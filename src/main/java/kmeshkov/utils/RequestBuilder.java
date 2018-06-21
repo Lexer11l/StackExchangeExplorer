@@ -5,6 +5,7 @@ import org.apache.log4j.Logger;
 
 
 import static java.util.Objects.isNull;
+import static kmeshkov.utils.StringConstants.GET_REQUEST_BASE_URL;
 import static org.springframework.util.StringUtils.isEmpty;
 
 public class RequestBuilder {
@@ -15,7 +16,7 @@ public class RequestBuilder {
 
     public RequestBuilder(Query query) {
         this.query = query;
-        this.request = new StringBuilder("http://api.stackexchange.com/2.2/search?site=stackoverflow");
+        this.request = new StringBuilder(GET_REQUEST_BASE_URL);
     }
 
     public String createRequest() {

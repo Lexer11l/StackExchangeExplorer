@@ -19,8 +19,6 @@ public class StackExchangeDataSource implements DataSource {
     private final static Logger LOGGER = Logger.getLogger(StackExchangeDataSource.class);
 
     public String getTopics(Query query) throws IOException {
-
-        //return HtmlUtils.e;
         RequestBuilder requestBuilder = new RequestBuilder(query);
         String response = sendQueryAndGetResponse(requestBuilder.createRequest());
         LOGGER.info("Received response: " + response);
