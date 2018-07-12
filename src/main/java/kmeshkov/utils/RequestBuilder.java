@@ -48,7 +48,7 @@ public class RequestBuilder {
     }
 
     private void addIntitleParameter() {
-        String value = query.getIntitle().trim();
+        String value = query.getIntitle();
         if (isValidString(value)) request.append("&intitle=").append(value);
     }
 
@@ -61,11 +61,11 @@ public class RequestBuilder {
     }
 
     private void addPageParameter() {
-        request.append("&page=").append(query.getPage().trim());
+        request.append("&page=").append(query.getPage());
     }
 
     private void addPageSizeParameter() {
-        request.append("&pagesize=").append(query.getPageSize().trim());
+        request.append("&pagesize=").append(query.getPageSize()));
     }
 
     private void addToDateParameter() {
@@ -77,7 +77,7 @@ public class RequestBuilder {
     }
     
     private static boolean isValidString(String string){
-        Pattern p = Pattern.compile("^[A-Za-z0-9]+$");
+        Pattern p = Pattern.compile("^[A-Za-z0-9\s]+$");
         Matcher m = p.matcher(string);
         return m.matches();
     }
