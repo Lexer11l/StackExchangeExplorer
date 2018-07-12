@@ -1,8 +1,15 @@
 package kmeshkov.model;
 
 import java.util.Date;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Pattern;
+import javax.validation.constraints.Size;
 
 public class Query {
+    
+    @NotNull(message = "is required")
+    @Size(min=1, message = "is required")
+    @Pattern(regexp = "[\\W]+")
     private String intitle;
     private String queryResult;
     private String page;
