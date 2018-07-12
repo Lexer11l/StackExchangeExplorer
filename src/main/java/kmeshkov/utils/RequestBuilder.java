@@ -77,7 +77,7 @@ public class RequestBuilder {
     }
     
     private static boolean isValidString(String string){
-        Pattern p = Pattern.compile("^[A-Za-z0-9\s]+$");
+        Pattern p = Pattern.compile("^[А-Яа-яA-Za-z0-9\s]+$");
         Matcher m = p.matcher(string);
         return m.matches();
     }
