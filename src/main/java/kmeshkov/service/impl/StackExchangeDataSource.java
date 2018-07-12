@@ -17,6 +17,8 @@ import java.io.IOException;
 @Component
 public class StackExchangeDataSource implements DataSource {
     private final static Logger LOGGER = Logger.getLogger(StackExchangeDataSource.class);
+    HttpClient client = HttpClientBuilder.create().build();
+
 
     public String getTopics(Query query) throws IOException {
         RequestBuilder requestBuilder = new RequestBuilder(query);
@@ -27,7 +29,6 @@ public class StackExchangeDataSource implements DataSource {
 
     private String sendQueryAndGetResponse(String query) throws IOException {
         HttpGet get = new HttpGet(query);
-        HttpClient client = HttpClientBuilder.create().build();
         HttpResponse response = client.execute(get);
         int statusCode = response.getStatusLine().getStatusCode();
         LOGGER.info("Got response from remote service. Status code is " + statusCode);
