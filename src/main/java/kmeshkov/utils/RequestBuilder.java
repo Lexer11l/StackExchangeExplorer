@@ -48,8 +48,8 @@ public class RequestBuilder {
     }
 
     private void addIntitleParameter() {
-        String value = query.getIntitle();
-        if (isValidString(value)) request.append("&intitle=").append(value);
+        String value = query.getIntitle().replace(" " , "%20");
+        request.append("&intitle=").append(value);
     }
 
     private void addSortParameter() {
@@ -74,12 +74,5 @@ public class RequestBuilder {
 
     private void addFromDateParameter() {
         request.append("&fromdate=").append(query.getFromDate().getTime() / 1000);
-    }
-    
-    private static boolean isValidString(String string){
-        Pattern p = Pattern.compile("^[А-Яа-яA-Za-z0-9\\s]+$");
-        Matcher m = p.matcher(string);
-        return m.matches();
-    }
-
+    }    
 }
