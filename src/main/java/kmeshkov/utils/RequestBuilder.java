@@ -65,7 +65,7 @@ public class RequestBuilder {
     }
 
     private void addPageSizeParameter() {
-        request.append("&pagesize=").append(query.getPageSize()));
+        request.append("&pagesize=").append(query.getPageSize());
     }
 
     private void addToDateParameter() {
